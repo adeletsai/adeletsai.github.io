@@ -1,9 +1,9 @@
 :root {
-            --primary-color: #60afdc;
-            --secondary-color: #109dc0;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
             --accent-color: #e74c3c;
             --text-color: #2c3e50;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #0087d2 100%);
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         * {
