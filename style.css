@@ -19,7 +19,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    padding-top: 0px;
+    padding-top: 70px;
     background: var(--light-pink);
 }
 
