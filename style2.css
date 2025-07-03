@@ -1,9 +1,8 @@
 /* style3.css - 粉紅色系配色 */
 
-/* 粉紅色系配色變數 */
 :root {
-    --primary-pink: #ff6b9d;
-    --secondary-pink: #ffd3e0;
+    --primary-pink: #f47721;
+    --secondary-pink: #fd5c63;
     --light-pink: #fff0f5;
     --deep-pink: #e91e63;
     --gradient-pink: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 50%, #ffa8c0 100%);
