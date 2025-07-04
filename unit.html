@@ -27,7 +27,8 @@
         }
 
         .unit-nav-btn {
-            background: rgba(255, 107, 157, 0.9);
+            /* 修改背景色和陰影為紫色 */
+            background: var(--primary-color); /* 使用 style.css 中定義的主紫色 */
             color: white;
             border: none;
             width: 50px;
@@ -40,14 +41,15 @@
             cursor: pointer;
             transition: all 0.3s ease;
             pointer-events: auto;
-            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+            box-shadow: 0 4px 15px var(--purple-shadow); /* 使用 style.css 中定義的紫色陰影 */
             backdrop-filter: blur(10px);
         }
 
         .unit-nav-btn:hover {
-            background: rgba(255, 107, 157, 1);
+            /* 修改 hover 背景色和陰影為紫色 */
+            background: var(--deep-purple); /* 使用 style.css 中定義的深紫色 */
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4); /* 更深的紫色陰影 */
         }
 
         .unit-nav-btn:disabled {
@@ -99,14 +101,15 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 107, 157, 0.9);
+            /* 修改背景色和陰影為紫色 */
+            background: var(--primary-color); /* 使用 style.css 中定義的主紫色 */
             color: white;
             padding: 10px 20px;
             border-radius: 25px;
             font-weight: 500;
             z-index: 1000;
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+            box-shadow: 0 4px 15px var(--purple-shadow); /* 使用 style.css 中定義的紫色陰影 */
         }
 
         /* Mobile Responsive */
@@ -155,7 +158,8 @@
             color: #666;
             z-index: 999;
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 107, 157, 0.2);
+            /* 修改邊框顏色為紫色 */
+            border: 1px solid rgba(138, 43, 226, 0.2); /* 使用接近 primary-color 的透明度 */
             opacity: 0;
             animation: fadeInHint 0.5s ease 2s forwards;
         }
@@ -183,10 +187,9 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">2025 AI</a>
+            <a class="navbar-brand" href="index.html">2025 Adele's AI作品</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -214,7 +217,6 @@
         </div>
     </nav>
 
-    <!-- Unit Navigation - Left -->
     <div class="unit-nav-container unit-nav-left">
         <button class="unit-nav-btn" id="prevUnitBtn" onclick="navigateToUnit(currentUnit - 1)">
             <i class="fas fa-chevron-left"></i>
@@ -222,7 +224,6 @@
         </button>
     </div>
 
-    <!-- Unit Navigation - Right -->
     <div class="unit-nav-container unit-nav-right">
         <button class="unit-nav-btn" id="nextUnitBtn" onclick="navigateToUnit(currentUnit + 1)">
             <i class="fas fa-chevron-right"></i>
@@ -230,18 +231,15 @@
         </button>
     </div>
 
-    <!-- Unit Counter -->
     <div class="unit-counter" id="unitCounter">
         Unit 1 / 20
     </div>
 
-    <!-- Keyboard Navigation Hint -->
     <div class="keyboard-hint" id="keyboardHint">
         <button class="hint-close" onclick="closeHint()">&times;</button>
         💡 使用 ← → 鍵快速切換 Unit
     </div>
 
-    <!-- Project Header -->
     <section class="project-header">
         <div class="container">
             <a href="index.html#projects" class="back-btn">
@@ -268,20 +266,16 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <div class="container">
-        <!-- Image Gallery -->
         <section class="content-section fade-in">
             <h2 class="section-title">作業展示</h2>
             <div class="image-gallery">
                 <div class="gallery-grid" id="gallery-grid">
-                    <!-- Images will be dynamically generated -->
-                </div>
+                    </div>
             </div>
         </section>
     </div>
 
-    <!-- Image Modal -->
     <div class="modal fade" id="imageModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -297,7 +291,6 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         let currentUnit = 1;
