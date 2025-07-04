@@ -26,8 +26,8 @@ body {
 .navbar {
     background: #8A2BE2 !important; /* 設定為完全不透明的主紫色 */
     backdrop-filter: blur(10px);
-    box-shadow: none !important; /* 移除下方陰影 */
-    border: none !important; /* 確保沒有邊框 */
+    box-shadow: none !important; /* 確保移除所有陰影 */
+    border: none !important; /* 確保移除所有邊框 */
     transition: all 0.3s ease;
 }
 
