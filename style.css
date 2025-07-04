@@ -25,9 +25,10 @@ body {
 
 /* Navigation */
 .navbar {
-    background: rgba(138, 43, 226, 0.98) !important; /* 紫色透明度背景 */
+    background: #8A2BE2 !important; /* 設定為完全不透明的主紫色 */
     backdrop-filter: blur(10px);
-    box-shadow: none; /* 移除下方陰影 */
+    box-shadow: none !important; /* 移除下方陰影 */
+    border: none !important; /* 確保沒有邊框 */
 }
 
 .navbar-brand {
