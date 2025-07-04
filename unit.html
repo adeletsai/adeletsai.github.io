@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="/pic/favicon.ico">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">2025 AI</a>
@@ -41,7 +40,6 @@
         </div>
     </nav>
 
-    <!-- Project Header -->
     <section class="project-header">
         <div class="container">
             <a href="index.html#projects" class="back-btn">
@@ -68,20 +66,16 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <div class="container">
-        <!-- Image Gallery -->
         <section class="content-section fade-in">
             <h2 class="section-title">作業展示</h2>
             <div class="image-gallery">
                 <div class="gallery-grid" id="gallery-grid">
-                    <!-- Images will be dynamically generated -->
-                </div>
+                    </div>
             </div>
         </section>
     </div>
 
-    <!-- Image Modal -->
     <div class="modal fade" id="imageModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -97,7 +91,6 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         let currentUnit = 1;
@@ -261,7 +254,8 @@
             });
         });
 
-        // Navbar background on scroll
+        // 移除這段會將導覽列背景變為白色的 JavaScript
+        /*
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
@@ -270,6 +264,7 @@
                 navbar.style.background = 'rgba(255,255,255,0.95)';
             }
         });
+        */
     </script>
 
 <script>
