@@ -24,9 +24,10 @@ body {
 
 /* Navigation */
 .navbar {
-    background: rgba(138, 43, 226, 0.95) !important; /* 紫羅蘭色透明度背景 */
+    background: #8A2BE2 !important; /* 設定為完全不透明的主紫色 */
     backdrop-filter: blur(10px);
-    box-shadow: none; /* 移除下方陰影 */
+    box-shadow: none !important; /* 移除下方陰影 */
+    border: none !important; /* 確保沒有邊框 */
     transition: all 0.3s ease;
 }
 
