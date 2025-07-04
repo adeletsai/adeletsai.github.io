@@ -25,25 +25,25 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #8A2BE2 !important; /* 設定為完全不透明的主紫色，覆蓋所有透明度設定 */
+    background: white !important; /* 將背景色改為白色 */
     backdrop-filter: blur(10px);
-    box-shadow: none !important; /* 確保移除所有陰影 */
-    border: none !important; /* 確保移除所有邊框 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important; /* 增加一個輕微的陰影讓導覽列更明顯 */
+    border: none !important;
 }
 
 .navbar-brand {
     font-weight: 700;
-    color: white !important;
+    color: var(--primary-color) !important; /* 品牌名稱顏色改為 primary-color */
 }
 
 .nav-link {
-    color: white !important;
+    color: var(--primary-color) !important; /* 導覽連結文字顏色改為 primary-color */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--light-purple) !important; /* 淺粉紫 hover 效果 */
+    color: var(--secondary-color) !important; /* hover 時顏色改為 secondary-color */
     transform: translateY(-2px);
 }
 
