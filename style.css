@@ -1,12 +1,30 @@
+好的，我將會針對這兩個 CSS 檔案進行修改，將整體色調改為粉紫色系。同時，對於 "unit" 頁面的導覽列，我會移除其下方的線條。
+
+**修改策略：**
+
+1.  **定義粉紫色系變數：** 在 `:root` 中定義新的顏色變數，包含粉色和紫色的漸變、淺粉紫、深紫等。
+2.  **替換現有顏色變數：** 將 `style.css` 和 `style2.css` 中現有的粉色系變數替換為新的粉紫色系變數。
+3.  **調整漸變色：** 修改背景漸變 `linear-gradient`，使其包含粉色和紫色。
+4.  **導覽列調整 (style.css)：** 移除 `.navbar` 下方可能存在的 `box-shadow` 或 `border-bottom` 屬性，使其不會出現線條。
+5.  **導覽列調整 (style2.css)：** 移除 `navbar` 下方的 `box-shadow` 屬性，使其不會出現線條。
+6.  **細節調整：** 針對其他可能需要調整的元素（如按鈕、卡片陰影等），調整其顏色以符合新的粉紫色系。
+
+由於我無法直接修改您提供的檔案，我會為您提供修改後的 CSS 程式碼。請您將這些程式碼複製並替換掉您原有的 `style.css` 和 `style2.css` 檔案中的內容。
+
+-----
+
+### 修改後的 `style.css` (粉紫色系)
+
+```css
 :root {
-    --primary-color: #e91e63;
-    --secondary-color: #ff6b9d;
-    --accent-color: #ff1744;
+    --primary-color: #8A2BE2; /* 紫羅蘭色 - 主色 */
+    --secondary-color: #DA70D6; /* 蘭花紫 - 次要色 */
+    --accent-color: #9370DB; /* 淺紫羅蘭色 - 強調色 */
     --text-color: #2c3e50;
-    --bg-gradient: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 50%, #ffa8c0 100%);
-    --light-pink: #fff0f5;
-    --deep-pink: #c2185b;
-    --pink-shadow: rgba(255, 107, 157, 0.3);
+    --bg-gradient: linear-gradient(135deg, #DA70D6 0%, #BA55D3 50%, #8A2BE2 100%); /* 粉紫漸變 */
+    --light-purple: #F5EEF8; /* 淺粉紫 */
+    --deep-purple: #6A0DAD; /* 深紫 */
+    --purple-shadow: rgba(138, 43, 226, 0.3); /* 紫色陰影 */
 }
 
 * {
@@ -20,14 +38,14 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     padding-top: 70px;
-    background: var(--light-pink);
+    background: var(--light-purple); /* 淺粉紫背景 */
 }
 
 /* Navigation */
 .navbar {
-    background: rgba(255, 107, 157, 0.98) !important;
+    background: rgba(138, 43, 226, 0.98) !important; /* 紫色透明度背景 */
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px var(--pink-shadow);
+    box-shadow: none; /* 移除下方陰影 */
 }
 
 .navbar-brand {
@@ -42,30 +60,30 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--light-pink) !important;
+    color: var(--light-purple) !important; /* 淺粉紫 hover 效果 */
     transform: translateY(-2px);
 }
 
 /* Language Toggle */
 .lang-toggle {
-    background: var(--accent-color);
+    background: var(--accent-color); /* 淺紫羅蘭色 */
     border: none;
     color: white;
     padding: 8px 16px;
     border-radius: 25px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 23, 68, 0.3);
+    box-shadow: 0 4px 15px rgba(147, 112, 219, 0.3); /* 紫色陰影 */
 }
 
 .lang-toggle:hover {
-    background: #d50000;
+    background: #6A0DAD; /* 深紫 hover 效果 */
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 23, 68, 0.4);
+    box-shadow: 0 6px 20px rgba(147, 112, 219, 0.4);
 }
 
 /* Header Section */
 .project-header {
-    background: var(--bg-gradient);
+    background: var(--bg-gradient); /* 粉紫漸變背景 */
     color: white;
     padding: 4rem 0 2rem;
     margin-bottom: 2rem;
@@ -123,7 +141,7 @@ body {
 }
 
 .breadcrumb-item a:hover {
-    color: var(--light-pink);
+    color: var(--light-purple); /* 淺粉紫 hover 效果 */
 }
 
 .breadcrumb-item.active {
@@ -149,7 +167,7 @@ body {
     background: rgba(255,255,255,0.3);
     color: white;
     transform: translateX(-5px);
-    box-shadow: 0 5px 15px var(--pink-shadow);
+    box-shadow: 0 5px 15px var(--purple-shadow); /* 紫色陰影 */
 }
 
 .back-btn i {
@@ -162,19 +180,19 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.1);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.1); /* 紫色陰影 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content-section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.15);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.15); /* 紫色陰影 */
 }
 
 .section-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--primary-color); /* 紫羅蘭色 */
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
@@ -187,7 +205,7 @@ body {
     left: 0;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color)); /* 粉紫漸變 */
     border-radius: 2px;
 }
 
@@ -207,7 +225,7 @@ body {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.15);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15); /* 紫色陰影 */
     transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid transparent;
@@ -215,8 +233,8 @@ body {
 
 .gallery-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(255, 107, 157, 0.25);
-    border-color: var(--secondary-color);
+    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.25); /* 紫色陰影 */
+    border-color: var(--secondary-color); /* 蘭花紫邊框 */
 }
 
 .gallery-item img {
@@ -235,7 +253,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(233, 30, 99, 0.9));
+    background: linear-gradient(transparent, rgba(138, 43, 226, 0.9)); /* 紫色漸變 */
     color: white;
     padding: 1.5rem;
     transform: translateY(100%);
@@ -263,11 +281,11 @@ body {
     border: none;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(255, 107, 157, 0.3);
+    box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3); /* 紫色陰影 */
 }
 
 .modal-header {
-    background: var(--bg-gradient);
+    background: var(--bg-gradient); /* 粉紫漸變背景 */
     color: white;
     border: none;
 }
@@ -296,18 +314,18 @@ body {
     border-radius: 15px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 5px 20px rgba(255, 107, 157, 0.1);
-    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 5px 20px rgba(138, 43, 226, 0.1); /* 紫色陰影 */
+    border-left: 4px solid var(--secondary-color); /* 蘭花紫邊框 */
     transition: all 0.3s ease;
 }
 
 .info-card:hover {
     transform: translateX(5px);
-    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.15);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.15); /* 紫色陰影 */
 }
 
 .info-card h5 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* 紫羅蘭色 */
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -319,23 +337,23 @@ body {
 
 /* Buttons */
 .btn-primary {
-    background: var(--bg-gradient);
+    background: var(--bg-gradient); /* 粉紫漸變背景 */
     border: none;
     border-radius: 25px;
     padding: 10px 25px;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px var(--pink-shadow);
+    box-shadow: 0 4px 15px var(--purple-shadow); /* 紫色陰影 */
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4); /* 紫色陰影 */
 }
 
 .btn-outline-primary {
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color); /* 蘭花紫邊框 */
+    color: var(--secondary-color); /* 蘭花紫文字 */
     border-radius: 25px;
     padding: 10px 25px;
     font-weight: 500;
@@ -343,10 +361,10 @@ body {
 }
 
 .btn-outline-primary:hover {
-    background: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background: var(--secondary-color); /* 蘭花紫背景 */
+    border-color: var(--secondary-color); /* 蘭花紫邊框 */
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--pink-shadow);
+    box-shadow: 0 5px 15px var(--purple-shadow); /* 紫色陰影 */
 }
 
 /* Animations */
@@ -364,33 +382,33 @@ body {
 /* Tags and Labels */
 .tag {
     display: inline-block;
-    background: var(--bg-gradient);
+    background: var(--bg-gradient); /* 粉紫漸變背景 */
     color: white;
     padding: 4px 12px;
     border-radius: 15px;
     font-size: 0.8rem;
     font-weight: 500;
     margin: 2px;
-    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.2);
+    box-shadow: 0 2px 8px rgba(138, 43, 226, 0.2); /* 紫色陰影 */
 }
 
 /* Progress Bars */
 .progress {
     height: 8px;
     border-radius: 4px;
-    background: rgba(255, 107, 157, 0.1);
+    background: rgba(138, 43, 226, 0.1); /* 紫色透明度背景 */
 }
 
 .progress-bar {
-    background: var(--bg-gradient);
+    background: var(--bg-gradient); /* 粉紫漸變背景 */
     border-radius: 4px;
 }
 
 /* Alerts */
 .alert-info {
-    background: rgba(255, 107, 157, 0.1);
-    border: 1px solid rgba(255, 107, 157, 0.2);
-    color: var(--deep-pink);
+    background: rgba(138, 43, 226, 0.1); /* 紫色透明度背景 */
+    border: 1px solid rgba(138, 43, 226, 0.2); /* 紫色邊框 */
+    color: var(--deep-purple); /* 深紫文字 */
     border-radius: 10px;
 }
 
@@ -447,3 +465,356 @@ body {
         padding: 1rem;
     }
 }
+```
+
+-----
+
+### 修改後的 `style2.css` (粉紫色系)
+
+```css
+/* style2.css - 粉紫色系配色 */
+
+/* 粉紫色系配色變數 */
+:root {
+    --primary-purple: #8A2BE2; /* 紫羅蘭色 - 主色 */
+    --secondary-purple: #E6E6FA; /* 薰衣草色 - 次要色 */
+    --light-purple: #F5EEF8; /* 淺粉紫 */
+    --deep-purple: #6A0DAD; /* 深紫 */
+    --gradient-purple: linear-gradient(135deg, #DA70D6 0%, #BA55D3 50%, #8A2BE2 100%); /* 粉紫漸變 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: var(--light-purple); /* 淺粉紫背景 */
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(138, 43, 226, 0.95) !important; /* 紫羅蘭色透明度背景 */
+    backdrop-filter: blur(10px);
+    box-shadow: none; /* 移除下方陰影 */
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-purple) !important; /* 薰衣草色 hover 效果 */
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background: var(--gradient-purple); /* 粉紫漸變背景 */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="100" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="300" r="150" fill="rgba(255,255,255,0.05)"/><circle cx="600" cy="700" r="120" fill="rgba(255,255,255,0.08)"/></svg>');
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--deep-purple); /* 深紫 */
+    font-weight: bold;
+}
+
+.bg-light {
+    background: var(--secondary-purple) !important; /* 薰衣草色背景 */
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2); /* 紫色陰影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3); /* 紫色陰影 */
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: white;
+    color: var(--primary-purple); /* 紫羅蘭色 */
+    border: 2px solid var(--primary-purple); /* 紫羅蘭色邊框 */
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-purple); /* 紫羅蘭色背景 */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4); /* 紫色陰影 */
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(138, 43, 226, 0.15); /* 紫色陰影 */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-purple); /* 粉紫漸變 */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.25); /* 紫色陰影 */
+}
+
+.project-number {
+    background: var(--gradient-purple); /* 粉紫漸變背景 */
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.project-card h5 {
+    color: var(--deep-purple); /* 深紫 */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-info {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2); /* 紫色陰影 */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--light-purple); /* 淺粉紫背景 */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--primary-purple); /* 紫羅蘭色 */
+    margin-right: 1rem;
+    width: 50px;
+}
+
+.contact-item a {
+    color: var(--deep-purple) !important; /* 深紫文字 */
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--primary-purple) !important; /* 紫羅蘭色 hover 效果 */
+}
+
+/* Footer */
+.footer {
+    background: var(--deep-purple); /* 深紫背景 */
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .filter-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-info {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .project-card {
+        padding: 1.2rem;
+    }
+    
+    .contact-info {
+        padding: 1.5rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-item i {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+```
